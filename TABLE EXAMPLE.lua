@@ -35,12 +35,14 @@ getgenv().Compressed = {
     Aimbot = {
         Enabled = true,
         Smoothness = 0.25,
-        Prediction = 0,
+        Prediction = 0.13,
         AimPart = "HumanoidRootPart",
         FOV = 150,
         LockOnKey = Enum.KeyCode.C,
         HoldBind = false,
-        LockedTarget = nil
+        LockedTarget = nil,
+        Yaxis  = -12, -- the lower the higher the y axis
+        Type = "Mouse" -- "Camera", "Mouse"
     },
     Camera360 = {
         Enabled = false,
@@ -90,6 +92,7 @@ getgenv().Compressed = {
     }
     
 }
+
 
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/7960ac6c674c20c3a6ad68907a4880c2.lua"))()
