@@ -35,12 +35,14 @@ getgenv().Compressed = {
     Aimbot = {
         Enabled = true,
         Smoothness = 0.25,
-        Prediction = 0,
+        Prediction = 0.13,
         AimPart = "HumanoidRootPart",
         FOV = 150,
         LockOnKey = Enum.KeyCode.C,
         HoldBind = false,
-        LockedTarget = nil
+        LockedTarget = nil,
+        Yaxis  = -12, -- the lower the higher the y axis
+        Type = "Mouse" -- "Camera", "Mouse"
     },
     Camera360 = {
         Enabled = false,
