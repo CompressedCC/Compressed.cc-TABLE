@@ -10,12 +10,12 @@ getgenv().Compressed = {
         Enabled = true,
         Settings = {
             SilentHitChance = 100,
+            UseClosestPart = false,
             TargetHitPart = "HumanoidRootPart",
             SafeMode = false,
             DynamicPrediction = false,
             PredictionForSilent = 0,
             AntiAimViewer = false,
-            UseClosestPart = false,
             AntiCurve = false,
             Resolver = false, 
         },
@@ -90,5 +90,6 @@ getgenv().Compressed = {
     }
     
 }
+
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/7960ac6c674c20c3a6ad68907a4880c2.lua"))()
