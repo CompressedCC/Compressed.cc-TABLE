@@ -1,8 +1,8 @@
 -- this script is MADE for dahood and dahood only, but works on other games, dont complain about issues unless its for dahood
 -- DONT double inject/execute, it will freeze you, not your game but your player.
+script_key="";
 getgenv().Compressed = {
     Main = {
-        AuthencationKey = "",
         Intro = true,
         Build = "V1" -- dont change
     },
