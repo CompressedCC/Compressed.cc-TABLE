@@ -1,9 +1,8 @@
-example ```lua
 -- this script is MADE for dahood and dahood only, but works on other games, dont complain about issues unless its for dahood
 -- DONT double inject/execute, it will freeze you, not your game but your player.
+script_key="";
 getgenv().Compressed = {
     Main = {
-        AuthencationKey = "YOURE_KEY_HERE",
         Intro = true,
         Build = "V1" -- dont change
     },
@@ -90,6 +89,4 @@ getgenv().Compressed = {
         },
     }
     
-} 
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/7960ac6c674c20c3a6ad68907a4880c2.lua"))()
-```
+}
