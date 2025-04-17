@@ -3,19 +3,19 @@
 script_key="";
 getgenv().Compressed = {
     Main = {
-        Intro = true,
+        Intro = false,
         Build = "V1" -- dont change
     },
     SilentAim = {
         Enabled = true,
         Settings = {
             SilentHitChance = 100,
+            UseClosestPart = false,
             TargetHitPart = "HumanoidRootPart",
             SafeMode = false,
             DynamicPrediction = false,
             PredictionForSilent = 0,
             AntiAimViewer = false,
-            UseClosestPart = false,
             AntiCurve = false,
             Resolver = false, 
         },
