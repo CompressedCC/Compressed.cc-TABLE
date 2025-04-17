@@ -82,10 +82,6 @@ getgenv().Compressed = {
     AntiSit = {
         Enabled = false
     },
-    AutoBuy = {
-        Armor = true,
-        Range = "100"
-    },
     WeaponMods = {
         RapidFire = {
             Enabled = false,
