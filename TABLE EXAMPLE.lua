@@ -1,17 +1,17 @@
-
 -- this script is MADE for dahood and dahood only, but works on other games, dont complain about issues unless its for dahood
 -- DONT double inject/execute, it will freeze you, not your game but your player.
 script_key="";
 getgenv().Compressed = {
     Main = {
         Intro = false,
-        Build = "V1.2" -- dont change
+        Build = "V1.3" -- dont change
     },
     SilentAim = {
         Enabled = true,
         Settings = {
             SilentHitChance = 100,
             UseClosestPart = false,
+            UseClosestPoint = false,
             TargetHitPart = "HumanoidRootPart",
             SafeMode = false,
             ForceHit = false,
@@ -20,8 +20,8 @@ getgenv().Compressed = {
             AntiAimViewer = false,
             AntiCurve = false, -- removed temp
             AutoEnableResolver = false,
-            Resolver = false, 
-            ResolverV2 = false,
+            Resolver = "None",  -- None, Velocity, Recalculation
+              
             AutoPrediction = { -- broken i think
                 Enabled = false,
                 Table = {
@@ -50,8 +50,8 @@ getgenv().Compressed = {
             }
         },
         Visuals = {
-            FOV = 225,
-            ShowFOV = true,
+            FOV = 160,
+            ShowFOV = false,
             FOVColor = Color3.fromRGB(255, 255, 255),
             FOVThickness = 1.5,
             FOVTransparency = 0.7
@@ -125,5 +125,4 @@ getgenv().Compressed = {
     }
     
 }
-
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/7960ac6c674c20c3a6ad68907a4880c2.lua"))()
