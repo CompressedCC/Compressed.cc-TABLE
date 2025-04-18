@@ -1,7 +1,7 @@
 
 -- this script is MADE for dahood and dahood only, but works on other games, dont complain about issues unless its for dahood
 -- DONT double inject/execute, it will freeze you, not your game but your player.
-script_key="";
+script_key="reepkkvPybSzCbodRiIjffwVQzyoUeoK";
 getgenv().Compressed = {
     Main = {
         Intro = false,
@@ -87,7 +87,7 @@ getgenv().Compressed = {
         Speed = 2,
         Type = "Third" -- "Third", "First"
 
-    }
+    },
     Triggerbot = {
         Enabled = false,
         Keybind = Enum.KeyCode.T,
