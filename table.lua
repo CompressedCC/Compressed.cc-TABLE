@@ -1,10 +1,11 @@
+
 -- this script is MADE for dahood and dahood only, but works on other games, dont complain about issues unless its for dahood
 -- DONT double inject/execute, it will freeze you, not your game but your player.
 script_key="";
 getgenv().Compressed = {
     Main = {
         Intro = false,
-        Build = "V1.1" -- dont change
+        Build = "V1.2" -- dont change
     },
     SilentAim = {
         Enabled = true,
@@ -81,6 +82,12 @@ getgenv().Compressed = {
         Angle = 360,
         Rotating = false
     },
+    Macro = {
+        Keybind =  Enum.KeyCode.X,
+        Speed = 2,
+        Type = "Third" -- "Third", "First"
+
+    }
     Triggerbot = {
         Enabled = false,
         Keybind = Enum.KeyCode.T,
