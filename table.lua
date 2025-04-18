@@ -1,7 +1,7 @@
 
 -- this script is MADE for dahood and dahood only, but works on other games, dont complain about issues unless its for dahood
 -- DONT double inject/execute, it will freeze you, not your game but your player.
-script_key="reepkkvPybSzCbodRiIjffwVQzyoUeoK";
+script_key="";
 getgenv().Compressed = {
     Main = {
         Intro = false,
@@ -11,7 +11,7 @@ getgenv().Compressed = {
         Enabled = true,
         Settings = {
             SilentHitChance = 100,
-            UseClosestPart = true,
+            UseClosestPart = false,
             TargetHitPart = "HumanoidRootPart",
             SafeMode = false,
             ForceHit = false,
@@ -21,6 +21,7 @@ getgenv().Compressed = {
             AntiCurve = false, -- removed temp
             AutoEnableResolver = false,
             Resolver = false, 
+            ResolverV2 = false,
             AutoPrediction = { -- broken i think
                 Enabled = false,
                 Table = {
@@ -49,14 +50,14 @@ getgenv().Compressed = {
             }
         },
         Visuals = {
-            FOV = 165,
-            ShowFOV = false,
+            FOV = 225,
+            ShowFOV = true,
             FOVColor = Color3.fromRGB(255, 255, 255),
             FOVThickness = 1.5,
             FOVTransparency = 0.7
         },
         Internal = { -- dont touch
-            UseCamlockTarget = true,
+            UseCamlockTarget = false,
             LockedTarget = nil,
             IsBeingSpectated = nil,
             OriginalIndex = nil
@@ -65,10 +66,10 @@ getgenv().Compressed = {
     Aimbot = {
         Enabled = true,
         Smoothness = 0.11,
-        Prediction = 0.23,
+        Prediction = 0,
         AimPart = "HumanoidRootPart",
         FOV = 150,
-        ShowFOV = true,
+        ShowFOV = false,
         LockOnKey = Enum.KeyCode.C,
         HoldBind = false,
         LockedTarget = nil,
@@ -76,16 +77,16 @@ getgenv().Compressed = {
         Type = "Camera" -- "Camera", "Mouse"
     },
     Camera360 = {
-        Enabled = true,
+        Enabled = false,
         Sensitivity = 3900, -- SPEED
-        ToggleKey = Enum.KeyCode.Z,
+        ToggleKey = Enum.KeyCode.X,
         Angle = 360,
         Rotating = false
     },
     Macro = {
-        Keybind =  Enum.KeyCode.X,
+        Keybind =  Enum.KeyCode.Z,
         Speed = 2,
-        Type = "Third" -- "Third", "First"
+        Type = "First" -- "Third", "First"
 
     },
     Triggerbot = {
@@ -95,6 +96,7 @@ getgenv().Compressed = {
         Cooldown = 0.1,
         TargetPart = "Head",
         TeamCheck = false,
+        KnifeCheck = true,
         LastShot = 0
     },  
     Recoil = {
