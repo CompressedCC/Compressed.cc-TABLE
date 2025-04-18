@@ -10,14 +10,40 @@ getgenv().Compressed = {
         Enabled = true,
         Settings = {
             SilentHitChance = 100,
-            UseClosestPart = false,
+            UseClosestPart = true,
             TargetHitPart = "HumanoidRootPart",
             SafeMode = false,
             DynamicPrediction = false,
             PredictionForSilent = 0,
             AntiAimViewer = false,
-            AntiCurve = false,
+            AntiCurve = true,
             Resolver = false, 
+            AutoPrediction = { -- broken i think
+                Enabled = false,
+                Table = {
+                    Ping20 = 0.1294,
+                    Ping30 = 0.1258824,
+                    Ping40 = 0.115,
+                    Ping50 = 0.1294,
+                    Ping60 = 0.12588,
+                    Ping70 = 0.12591,
+                    Ping80 = 0.1294,
+                    Ping90 = 0.12746,
+                    Ping100 = 0.1276,
+                    Ping110 = 0.1294,
+                    Ping120 = 0.129411,
+                    Ping130 = 0.151,
+                    Ping140 = 0.1652131,
+                    Ping150 = 0.125333,
+                    Ping160 = 0.1223333,
+                    Ping170 = 0.15,
+                    Ping180 = 0.1923111,
+                    Ping190 = 0.165771,
+                    Ping200 = 0.1746,
+                    Ping250 = 0.1456,
+                    Ping300 = 0.12194
+                }
+            }
         },
         Visuals = {
             FOV = 165,
@@ -34,15 +60,15 @@ getgenv().Compressed = {
     },
     Aimbot = {
         Enabled = true,
-        Smoothness = 0.25,
-        Prediction = 0.13,
+        Smoothness = 0.8,
+        Prediction = 0.23,
         AimPart = "HumanoidRootPart",
         FOV = 150,
         LockOnKey = Enum.KeyCode.C,
         HoldBind = false,
         LockedTarget = nil,
         Yaxis  = -12, -- the lower the higher the y axis
-        Type = "Mouse" -- "Camera", "Mouse"
+        Type = "Camera" -- "Camera", "Mouse"
     },
     Camera360 = {
         Enabled = false,
@@ -59,30 +85,24 @@ getgenv().Compressed = {
         TargetPart = "Head",
         TeamCheck = false,
         LastShot = 0
-    },
-    Macros = {
-        Enabled         = true,
-        Type            = "Ingame",       
-        SpeedGlitchKey  = Enum.KeyCode.Z,
-        SpeedGlitch     = false
-    },    
+    },  
     Recoil = {
-        Enabled = false, -- true for no recoil
+        Enabled = false -- true for no recoil
     },
     AntiFling = {
-        Enabled = false,
+        Enabled = true
     },
     FreeCam = {
         Enabled = false,
         Keybind = Enum.KeyCode.F, 
-        Speed = 1,
+        Speed = 1
     },
     NoClip = {
         Enabled = false,
         Keybind = Enum.KeyCode.N 
     },
     AntiSit = {
-        Enabled = false
+        Enabled = true
     },
     WeaponMods = {
         RapidFire = {
@@ -92,6 +112,7 @@ getgenv().Compressed = {
     }
     
 }
+
 
 
 
