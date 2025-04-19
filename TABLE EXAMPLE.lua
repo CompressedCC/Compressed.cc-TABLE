@@ -22,8 +22,8 @@ getgenv().Compressed = {
             AutoEnableResolver = false,
             Resolver = "None",  -- None, Velocity, Recalculation
               
-            AutoPrediction = { -- broken i think
-                Enabled = false,
+            AutoPrediction = { 
+                Enabled = true,
                 Table = {
                     Ping20 = 0.1294,
                     Ping30 = 0.1258824,
@@ -139,6 +139,7 @@ getgenv().Compressed = {
         },
     },
 }
+
 
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/7960ac6c674c20c3a6ad68907a4880c2.lua"))()
