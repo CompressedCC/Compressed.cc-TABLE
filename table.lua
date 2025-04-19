@@ -22,8 +22,8 @@ getgenv().Compressed = {
             AutoEnableResolver = false,
             Resolver = "None",  -- None, Velocity, Recalculation
               
-            AutoPrediction = { -- broken i think
-                Enabled = false,
+            AutoPrediction = { 
+                Enabled = true,
                 Table = {
                     Ping20 = 0.1294,
                     Ping30 = 0.1258824,
@@ -139,5 +139,3 @@ getgenv().Compressed = {
         },
     },
 }
-
-
