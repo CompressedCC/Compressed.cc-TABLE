@@ -20,8 +20,7 @@ getgenv().Compressed = {
             AntiAimViewer = false,
             AntiCurve = false, -- removed temp
             AutoEnableResolver = false,
-            Resolver = "None",  -- None, Velocity, Recalculation
-              
+            Resolver = "None",  -- None, Velocity, Recalculation         
             AutoPrediction = { 
                 Enabled = true,
                 Table = {
