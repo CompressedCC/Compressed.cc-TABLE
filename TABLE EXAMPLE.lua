@@ -4,7 +4,7 @@ script_key="";
 getgenv().Compressed = {
     Main = {
         Intro = false,
-        Build = "V1.3" -- dont change
+        Build = "V1.4" -- dont change
     },
     SilentAim = {
         Enabled = true,
@@ -14,7 +14,7 @@ getgenv().Compressed = {
             UseClosestPoint = false,
             TargetHitPart = "HumanoidRootPart",
             SafeMode = false,
-            ForceHit = false,
+            MagicBullet = false,
             DynamicPrediction = false,
             PredictionForSilent = 0,
             AntiAimViewer = false,
@@ -52,6 +52,7 @@ getgenv().Compressed = {
         Visuals = {
             FOV = 160,
             ShowFOV = false,
+            FovSides = 60, -- put 12 for a less round circle
             FOVColor = Color3.fromRGB(255, 255, 255),
             FOVThickness = 1.5,
             FOVTransparency = 0.7
@@ -120,9 +121,10 @@ getgenv().Compressed = {
     WeaponMods = {
         RapidFire = {
             Enabled = false,
-            Speed = 0.00000000000000000001 -- fast
+            Speed = 0.00000000000000000001 -- Bullet Cooldown Speed lower is faster
         },
-    }
-    
+    },
 }
+
+
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/7960ac6c674c20c3a6ad68907a4880c2.lua"))()
