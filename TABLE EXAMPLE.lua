@@ -100,6 +100,11 @@ getgenv().Compressed = {
         KnifeCheck = true,
         LastShot = 0
     },  
+    Macros = {
+        Enabled = true,
+        SpeedGlitchKey = Enum.KeyCode.X,
+        SpeedGlitch = false
+    },
     Recoil = {
         Enabled = false -- true for no recoil
     },
@@ -125,5 +130,4 @@ getgenv().Compressed = {
         },
     },
 }
-
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/7960ac6c674c20c3a6ad68907a4880c2.lua"))()
