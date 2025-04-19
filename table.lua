@@ -4,7 +4,7 @@ script_key="";
 getgenv().Compressed = {
     Main = {
         Intro = false,
-        Build = "V1.4" -- dont change
+        Build = "V1.5" -- dont change
     },
     SilentAim = {
         Enabled = true,
@@ -50,15 +50,15 @@ getgenv().Compressed = {
             }
         },
         Visuals = {
-            FOV = 160,
-            ShowFOV = false,
+            FOV = 200,
+            ShowFOV = true,
             FovSides = 60, -- put 12 for a less round circle
             FOVColor = Color3.fromRGB(255, 255, 255),
             FOVThickness = 1.5,
             FOVTransparency = 0.7
         },
-        Internal = { -- dont touch
-            UseCamlockTarget = false,
+        Internal = { 
+            UseCamlockTarget = true,
             LockedTarget = nil,
             IsBeingSpectated = nil,
             OriginalIndex = nil
@@ -125,4 +125,3 @@ getgenv().Compressed = {
         },
     },
 }
-
