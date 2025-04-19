@@ -100,6 +100,11 @@ getgenv().Compressed = {
         KnifeCheck = true,
         LastShot = 0
     },  
+    Macros = {
+        Enabled = true,
+        SpeedGlitchKey = Enum.KeyCode.X,
+        SpeedGlitch = false
+    },
     Recoil = {
         Enabled = false -- true for no recoil
     },
