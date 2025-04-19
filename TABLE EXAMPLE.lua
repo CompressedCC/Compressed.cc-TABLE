@@ -4,7 +4,7 @@ script_key="";
 getgenv().Compressed = {
     Main = {
         Intro = false,
-        Build = "V1.5" -- dont change
+        Build = "V1.6" -- dont change
     },
     SilentAim = {
         Enabled = true,
@@ -58,6 +58,7 @@ getgenv().Compressed = {
             FOVTransparency = 0.7
         },
         Internal = { 
+            UnlockOnDeath = true,
             UseCamlockTarget = true,
             LockedTarget = nil,
             IsBeingSpectated = nil,
@@ -74,6 +75,7 @@ getgenv().Compressed = {
         LockOnKey = Enum.KeyCode.C,
         HoldBind = false,
         LockedTarget = nil,
+        UnlockOnDeath = true,
         Yaxis  = -12, -- the lower the higher the y axis
         Type = "Camera" -- "Camera", "Mouse"
     },
@@ -98,8 +100,15 @@ getgenv().Compressed = {
         TargetPart = "Head",
         TeamCheck = false,
         KnifeCheck = true,
-        LastShot = 0
-    },  
+        LastShot = 0,
+        HitDelay = 0.05,
+        MaxDistance = 1000,
+        Prediction = true,
+        PredictionVelocityMultiplier = 0.165,
+        HitChance = 80,
+        VisibilityCheck = true
+    },
+    
     Macros = {
         Enabled = true,
         SpeedGlitchKey = Enum.KeyCode.X,
@@ -130,4 +139,6 @@ getgenv().Compressed = {
         },
     },
 }
+
+
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/7960ac6c674c20c3a6ad68907a4880c2.lua"))()
