@@ -1,10 +1,10 @@
--- this script is MADE for dahood and dahood only, but works on other games, dont complain about issues unless its for dahood
+-- this script is MADE for dahood and hood customs only, but works on other games, dont complain about issues unless its for dahood & hood customs
 -- DONT double inject/execute, it will freeze you, not your game but your player.
 script_key="";
 getgenv().Compressed = {
     Main = {
         Intro = false,
-        Build = "V1.6" -- dont change
+        Build = "V1.7" -- dont change
     },
     SilentAim = {
         Enabled = true,
@@ -54,7 +54,8 @@ getgenv().Compressed = {
             FovSides = 60, -- put 12 for a less round circle
             FOVColor = Color3.fromRGB(255, 255, 255),
             FOVThickness = 1.5,
-            FOVTransparency = 0.7
+            FOVTransparency = 0.7, 
+            Tracer = true,
         },
         Internal = { 
             UnlockOnDeath = true,
@@ -138,5 +139,4 @@ getgenv().Compressed = {
         },
     },
 }
-
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/7960ac6c674c20c3a6ad68907a4880c2.lua"))()
