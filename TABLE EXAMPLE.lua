@@ -4,7 +4,7 @@ script_key="";
 getgenv().Compressed = {
     Main = {
         Intro = false,
-        Build = "V1.7" -- dont change
+        Build = "V1.8" -- dont change
     },
     SilentAim = {
         Enabled = true,
@@ -16,13 +16,13 @@ getgenv().Compressed = {
             SafeMode = false,
             MagicBullet = false,
             DynamicPrediction = false,
-            PredictionForSilent = 0,
+            PredictionForSilent = 0.1,
             AntiAimViewer = false,
             AntiCurve = false, -- removed temp
             AutoEnableResolver = false,
             Resolver = "None",  -- None, Velocity, Recalculation         
             AutoPrediction = { 
-                Enabled = true,
+                Enabled = false,
                 Table = {
                     Ping20 = 0.1294,
                     Ping30 = 0.1258824,
@@ -86,12 +86,6 @@ getgenv().Compressed = {
         Angle = 360,
         Rotating = false
     },
-    Macro = {
-        Keybind =  Enum.KeyCode.Z,
-        Speed = 2,
-        Type = "First" -- "Third", "First"
-
-    },
     Triggerbot = {
         Enabled = false,
         Keybind = Enum.KeyCode.T,
@@ -138,5 +132,14 @@ getgenv().Compressed = {
             Speed = 0.00000000000000000001 -- Bullet Cooldown Speed lower is faster
         },
     },
+    VisualEsp = {
+        Enabled = true,
+        Outline = true,
+        TeamCheck = false,
+        BoxColor = Color3.fromRGB(255, 255, 255),
+        OutlineColor = Color3.fromRGB(0, 0, 0),
+        BoxSize = Vector2.new(60, 80),
+    }
 }
+
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/7960ac6c674c20c3a6ad68907a4880c2.lua"))()
