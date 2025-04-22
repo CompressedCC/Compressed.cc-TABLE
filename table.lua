@@ -4,7 +4,7 @@ script_key="";
 getgenv().Compressed = {
     Main = {
         Intro = false,
-        Build = "V1.8" -- dont change
+        Build = "V1.9" -- dont change
     },
     SilentAim = {
         Enabled = true,
@@ -12,16 +12,31 @@ getgenv().Compressed = {
             SilentHitChance = 100,
             UseClosestPart = false,
             UseClosestPoint = false,
-            TargetHitPart = "HumanoidRootPart",
+            TargetHitPart = "Head",
             SafeMode = false,
             MagicBullet = false,
             DynamicPrediction = false,
-            PredictionForSilent = 0.1,
+            PredictionForSilent = 0.15,
             AntiAimViewer = false,
-            AntiCurve = false, -- removed temp
+            AntiCurve = false,
             AutoEnableResolver = false,
-            Resolver = "None",  -- None, Velocity, Recalculation         
-            AutoPrediction = { 
+            Resolver = "None",
+            IgnoreInvisibleTargets = true,
+            IgnoreDeadTargets = true,
+            IgnoreNoToolTargets = false,
+            PingSpoofCompensation = 0, -- dont use for now
+            StaggeredPredictionMode = true,
+            KnockedCheck = true,
+            StaggeredPredictionValues = { -- prediction for each part use 0 for head lowk
+                Head = 0,
+                UpperTorso = 0.08,
+                LowerTorso = 0.1,
+                HumanoidRootPart = 0
+            },
+            PlayerWhitelist = {}, -- usernames/userIds
+            PlayerBlacklist = {},
+            InternalCooldown = 0, -- cooldown for silent aim between shots,  use 0 for just normal silent
+            AutoPrediction = {
                 Enabled = false,
                 Table = {
                     Ping20 = 0.1294,
@@ -49,28 +64,30 @@ getgenv().Compressed = {
             }
         },
         Visuals = {
-            FOV = 200,
-            ShowFOV = true,
-            FovSides = 60, -- put 12 for a less round circle
+            FOV = 155,
+            ShowFOV = false,
+            FovSides = 60,
             FOVColor = Color3.fromRGB(255, 255, 255),
             FOVThickness = 1.5,
-            FOVTransparency = 0.7, 
-            Tracer = true,
+            FOVTransparency = 0.7,
+            Tracer = false,
         },
-        Internal = { 
+        Internal = {
             UnlockOnDeath = true,
-            UseCamlockTarget = true,
+            UseCamlockTarget = false,
             LockedTarget = nil,
             IsBeingSpectated = nil,
-            OriginalIndex = nil
+            OriginalIndex = nil,
+            _LastSilentShot = 0,
         }
     },
+        
     Aimbot = {
         Enabled = true,
-        Smoothness = 0.11,
+        Smoothness = 0.05,
         Prediction = 0,
         AimPart = "HumanoidRootPart",
-        FOV = 150,
+        FOV = 350,
         ShowFOV = false,
         LockOnKey = Enum.KeyCode.C,
         HoldBind = false,
@@ -105,14 +122,14 @@ getgenv().Compressed = {
     
     Macros = {
         Enabled = true,
-        SpeedGlitchKey = Enum.KeyCode.X,
+        SpeedGlitchKey = Enum.KeyCode.Z,
         SpeedGlitch = false
     },
     Recoil = {
         Enabled = false -- true for no recoil
     },
     AntiFling = {
-        Enabled = true
+        Enabled = false
     },
     FreeCam = {
         Enabled = false,
@@ -124,20 +141,48 @@ getgenv().Compressed = {
         Keybind = Enum.KeyCode.N 
     },
     AntiSit = {
-        Enabled = true
+        Enabled = false
     },
     WeaponMods = {
         RapidFire = {
             Enabled = false,
-            Speed = 0.00000000000000000001 -- Bullet Cooldown Speed lower is faster
+            -- Controls how fast bullets fire; lower = faster
+            BulletCooldown = 0000000001 -- or 0.1e-10 for clarity
         },
-    },
-    VisualEsp = {
-        Enabled = true,
-        Outline = true,
-        TeamCheck = false,
-        BoxColor = Color3.fromRGB(255, 255, 255),
-        OutlineColor = Color3.fromRGB(0, 0, 0),
-        BoxSize = Vector2.new(60, 80),
-    }
+    
+        WeaponMods = {
+            RapidFire = {
+                Enabled = false,
+                BulletCooldown = 0.0000000001 -- lower = faster bullets
+            },   
+            SpreadModifications = {
+                Enabled = true,
+        
+                Weapons = {
+                    M4A1 = {
+                        SpreadMultiplier = 0.5
+                    },
+                    AK47 = {
+                        SpreadMultiplier = 0.7
+                    },
+                    Pistol = {
+                        SpreadMultiplier = 0.4
+                    },
+                    Shotgun = {
+                        SpreadMultiplier = 0.8
+                    },
+                    ["Double-Barrel SG"] = {
+                        SpreadMultiplier = 0.65
+                    },
+                    Revolver = {
+                        SpreadMultiplier = 0.5
+                    },
+                    TacticalShotgun = {
+                        SpreadMultiplier = 0.75
+                    }
+                }
+            }
+        }
+    }            
 }
+
