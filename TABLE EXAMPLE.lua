@@ -8,7 +8,7 @@ getgenv().Compressed = {
         Build = "V1.9" -- Current version (do not change manually)
     },
 
-    SilentAim = {
+    BulletRedirection = {
         Enabled = true, -- Master switch for Silent Aim
         Settings = {
             SilentHitChance = 100, -- % chance to hit silently
@@ -41,31 +41,32 @@ getgenv().Compressed = {
             AutoPrediction = { -- Dynamic prediction based on ping
                 Enabled = false,
                 Table = { -- Ping-value map for prediction
-                Ping20 = 0.1294,
-                Ping30 = 0.1258824,
-                Ping40 = 0.115,
-                Ping50 = 0.1294,
-                Ping60 = 0.12588,
-                Ping70 = 0.12591,
-                Ping80 = 0.1294,
-                Ping90 = 0.12746,
-                Ping100 = 0.1276,
-                Ping110 = 0.1294,
-                Ping120 = 0.129411,
-                Ping130 = 0.151,
-                Ping140 = 0.1652131,
-                Ping150 = 0.125333,
-                Ping160 = 0.1223333,
-                Ping170 = 0.15,
-                Ping180 = 0.1923111,
-                Ping190 = 0.165771,
-                Ping200 = 0.1746,
-                Ping250 = 0.1456,
-                Ping300 = 0.12194
+                    Ping20 = 0.1294,
+                    Ping30 = 0.1258824,
+                    Ping40 = 0.115,
+                    Ping50 = 0.1294,
+                    Ping60 = 0.12588,
+                    Ping70 = 0.12591,
+                    Ping80 = 0.1294,
+                    Ping90 = 0.12746,
+                    Ping100 = 0.1276,
+                    Ping110 = 0.1294,
+                    Ping120 = 0.129411,
+                    Ping130 = 0.151,
+                    Ping140 = 0.1652131,
+                    Ping150 = 0.125333,
+                    Ping160 = 0.1223333,
+                    Ping170 = 0.15,
+                    Ping180 = 0.1923111,
+                    Ping190 = 0.165771,
+                    Ping200 = 0.1746,
+                    Ping250 = 0.1456,
+                    Ping300 = 0.12194
                 }
             }
-        },
-        Visuals = {
+        }, -- <- This comma was missing
+
+        Visualization = {
             FOV = 155, -- Field of view radius for silent aim
             ShowFOV = false, -- Toggles drawing FOV circle
             FovSides = 60, -- Polygon sides for the circle
@@ -74,6 +75,7 @@ getgenv().Compressed = {
             FOVTransparency = 0.7, -- Opacity of the FOV circle
             Tracer = false -- Draw tracer line to target
         },
+
         Internal = {
             UnlockOnDeath = true, -- Unlock target on death
             UseCamlockTarget = false, -- Share target with camera lock
@@ -85,84 +87,84 @@ getgenv().Compressed = {
     },
 
     Aimbot = {
-        Enabled = true, -- Master switch for aimbot
-        Smoothness = 0.05, -- Aim speed smoothing (lower = slower)
-        Prediction = 0, -- Static prediction value
-        AimPart = "HumanoidRootPart", -- Default target body part
-        FOV = 350, -- Aimbot locking radius
-        ShowFOV = false, -- Shows the FOV circle
-        LockOnKey = Enum.KeyCode.C, -- Keybind to toggle lock
-        HoldBind = false, -- Lock only while holding the key
-        LockedTarget = nil, -- Internal target
-        UnlockOnDeath = true, -- Release target on death
-        Yaxis = -12, -- Manual vertical offset (lower = higher lock)
-        Type = "Camera" -- Aim mode: "Camera" or "Mouse"
+        Enabled = true,
+        Smoothness = 0.05,
+        Prediction = 0,
+        AimPart = "HumanoidRootPart",
+        FOV = 350,
+        ShowFOV = false,
+        LockOnKey = Enum.KeyCode.C,
+        HoldBind = false,
+        LockedTarget = nil,
+        UnlockOnDeath = true,
+        Yaxis = -12,
+        Type = "Camera"
     },
 
     Camera360 = {
-        Enabled = false, -- Spins camera in 360 degrees
-        Sensitivity = 3900, -- Speed of camera rotation
-        ToggleKey = Enum.KeyCode.X, -- Keybind to toggle
-        Angle = 360, -- Full rotation angle
-        Rotating = false -- Runtime value for state
+        Enabled = false,
+        Sensitivity = 3900,
+        ToggleKey = Enum.KeyCode.X,
+        Angle = 360,
+        Rotating = false
     },
 
     Triggerbot = {
-        Enabled = false, -- Master switch for triggerbot
-        Keybind = Enum.KeyCode.T, -- Activation key
-        HoldToActivate = false, -- Only fires while holding key
-        Cooldown = 0.1, -- Delay between shots
-        TargetPart = "Head", -- Part to trigger on
-        TeamCheck = false, -- Skip teammates
-        KnifeCheck = true, -- Only trigger when holding knife
-        LastShot = 0, -- Internal delay tracker
-        HitDelay = 0.05, -- Wait between detect and fire
-        MaxDistance = 1000, -- Maximum target range
-        Prediction = true, -- Predicts movement before firing
-        PredictionValue = 0, -- Static prediction (if Prediction = true)
-        PredictionVelocityMultiplier = 0, -- Adds velocity adjustment
-        HitChance = 100, -- Chance to trigger (RNG)
-        VisibilityCheck = true -- Only trigger if target is visible
+        Enabled = false,
+        Keybind = Enum.KeyCode.T,
+        HoldToActivate = false,
+        Cooldown = 0.1,
+        TargetPart = "Head",
+        TeamCheck = false,
+        KnifeCheck = true,
+        LastShot = 0,
+        HitDelay = 0.05,
+        MaxDistance = 1000,
+        Prediction = true,
+        PredictionValue = 0,
+        PredictionVelocityMultiplier = 0,
+        HitChance = 100,
+        VisibilityCheck = true
     },
 
     Macros = {
-        Enabled = true, -- Enable macro features
-        SpeedGlitchKey = Enum.KeyCode.Z, -- Macro activation key
-        SpeedGlitch = false -- Toggles active glitch
+        Enabled = true,
+        SpeedGlitchKey = Enum.KeyCode.Z,
+        SpeedGlitch = false
     },
 
     Recoil = {
-        Enabled = false -- True = no recoil
+        Enabled = false
     },
 
     AntiFling = {
-        Enabled = false -- Prevents players from flinging you
+        Enabled = false
     },
 
     FreeCam = {
-        Enabled = false, -- Enables free camera mode
-        Keybind = Enum.KeyCode.F, -- Keybind to toggle
-        Speed = 1 -- Speed of camera movement
+        Enabled = false,
+        Keybind = Enum.KeyCode.F,
+        Speed = 1
     },
 
     NoClip = {
-        Enabled = true, -- Walk through objects
-        Keybind = Enum.KeyCode.N -- Toggle key
+        Enabled = true,
+        Keybind = Enum.KeyCode.N
     },
 
     AntiSit = {
-        Enabled = true -- Prevents sitting state
+        Enabled = true
     },
 
     WeaponMods = {
         RapidFire = {
-            Enabled = false, -- Enable super fast shooting
-            BulletCooldown = 0.0000000001 -- Delay between shots (lower = faster)
+            Enabled = false,
+            BulletCooldown = 0.0000000001
         },
         SpreadModifications = {
-            Enabled = true, -- Modify gun spread values
+            Enabled = true,
             Weapons = {
-                M4A1 = { SpreadMultiplier = 0.5 }, -- 50% spread
+                M4A1 = { SpreadMultiplier = 0.5 },
                 AK47 = { SpreadMultiplier = 0.7 },
                 Pistol = { SpreadMultiplier = 0.4 },
                 Shotgun = { SpreadMultiplier = 0.8 },
@@ -173,4 +175,5 @@ getgenv().Compressed = {
         }
     }
 }
+
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/7960ac6c674c20c3a6ad68907a4880c2.lua"))()
