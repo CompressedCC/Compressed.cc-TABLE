@@ -11,6 +11,7 @@ getgenv().Compressed = {
     BulletRedirection = {
         Enabled = true, -- Master switch for Silent Aim
         Settings = {
+            SilentAimDeactivationKey = Enum.KeyCode.P,
             SilentHitChance = 100, -- % chance to hit silently
             UseClosestPart = true, -- Aims at the closest part of target
             UseClosestPoint = false, -- Uses closest point on the target’s hitbox
